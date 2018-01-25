@@ -1,0 +1,7 @@
+tar -zvxf protobuf-2.5.0.tar.gz
+mkdir /root/protobuf
+cd protobuf-2.5.0
+./configure --prefix=/root/protobuf
+make
+make check
+make install

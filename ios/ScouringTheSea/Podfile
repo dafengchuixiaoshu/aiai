@@ -1,0 +1,6 @@
+platform :ios, '7.0'
+pod 'AFNetworking', '~> 2.5.3'
+pod 'EGOImageLoading', '~> 0.0.1'
+pod 'SSKeychain', '~> 1.2.3'
+pod 'MJExtension', '~> 2.0.0'
+pod 'SDCycleScrollView', '~> 1.3'

@@ -1,0 +1,27 @@
+<CONFIG>
+
+    <GMAXCOUNT>40</GMAXCOUNT>
+    
+    <HTTPSERVER>
+        <TYPE>TCP</TYPE>
+        <PROTO>BYTE</PROTO>
+        <VERSION>2</VERSION>
+        <LOCALPORT>8040</LOCALPORT>
+        <LOCALIP>10.51.111.49</LOCALIP>
+    </HTTPSERVER>
+
+    <UPSTREAM>
+        <STREAM NAME="router" ADDR="127.0.0.1:8030"/>
+    </UPSTREAM>
+    
+    <MYSQL>
+        <DESC>aiai</DESC>
+        <IP>127.0.0.1</IP>
+        <USER>root</USER>
+        <PIN>Zhuanyun1002015</PIN>
+        <DATABASE>miaomiao</DATABASE>
+        <PORT>3306</PORT>
+    </MYSQL> 
+
+</CONFIG>
+

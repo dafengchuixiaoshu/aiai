@@ -1,0 +1,19 @@
+<CONFIG>
+
+    <HTTPSERVER>
+        <TYPE>TCP</TYPE>
+        <PROTO>HTTP</PROTO>
+        <LOCALPORT>8000</LOCALPORT>
+        <LOCALIP>10.51.111.49</LOCALIP>
+    </HTTPSERVER>
+
+    <MYSQL>
+        <DESC>aiai</DESC>
+        <IP>127.0.0.1</IP>
+        <USER>root</USER>
+        <PIN>Zhuanyun1002015</PIN>
+        <DATABASE>miaomiao</DATABASE>
+        <PORT>3306</PORT>
+    </MYSQL>
+
+</CONFIG>

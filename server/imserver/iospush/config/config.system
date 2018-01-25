@@ -1,0 +1,23 @@
+<CONFIG>
+
+    <IMSERVER>
+        <TYPE>TCP</TYPE>
+        <PROTO>BYTE</PROTO>
+        <LOCALPORT>8050</LOCALPORT>
+        <LOCALIP>10.51.111.49</LOCALIP>
+    </IMSERVER>
+
+    <UPSTREAM>
+        <STREAM NAME="iospush" ADDR="123.57.251.23:9080" PROFILE="/SpreeCMS/msgIosPush.pb/?data="/>
+    </UPSTREAM>
+
+    <MYSQL>
+        <DESC>aiai</DESC>
+        <IP>127.0.0.1</IP>
+        <USER>root</USER>
+        <PIN>Zhuanyun1002015</PIN>
+        <DATABASE>miaomiao</DATABASE>
+        <PORT>3306</PORT>
+    </MYSQL>
+    
+</CONFIG>

@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.toolchain.gnu.cygwin.base.1719234088/CWD/delimiter=;
+environment/project/cdt.managedbuild.toolchain.gnu.cygwin.base.1719234088/CWD/operation=replace
+environment/project/cdt.managedbuild.toolchain.gnu.cygwin.base.1719234088/CWD/value=\\jni
+environment/project/cdt.managedbuild.toolchain.gnu.cygwin.base.1719234088/PWD/delimiter=;
+environment/project/cdt.managedbuild.toolchain.gnu.cygwin.base.1719234088/PWD/operation=replace
+environment/project/cdt.managedbuild.toolchain.gnu.cygwin.base.1719234088/PWD/value=\\jni
+environment/project/cdt.managedbuild.toolchain.gnu.cygwin.base.1719234088/append=true
+environment/project/cdt.managedbuild.toolchain.gnu.cygwin.base.1719234088/appendContributed=true

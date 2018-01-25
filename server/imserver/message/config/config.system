@@ -1,0 +1,28 @@
+<CONFIG>
+
+    <IMSERVER>
+        <TYPE>TCP</TYPE>
+        <PROTO>BYTE</PROTO>
+        <LOCALPORT>8020</LOCALPORT>
+        <LOCALIP>10.51.111.49</LOCALIP>
+    </IMSERVER>
+
+    <UPSTREAM>
+        <STREAM NAME="router" ADDR="127.0.0.1:8030"/>
+        <STREAM NAME="iospush" ADDR="127.0.0.1:8050"/>
+    </UPSTREAM>
+
+    <DOWNSTREAM>
+        <STREAM NAME="presence" ADDR="10.51.111.49:8010"/>
+    </DOWNSTREAM>
+
+    <MYSQL>
+        <DESC>aiai</DESC>
+        <IP>127.0.0.1</IP>
+        <USER>root</USER>
+        <PIN>Zhuanyun1002015</PIN>
+        <DATABASE>miaomiao</DATABASE>
+        <PORT>3306</PORT>
+    </MYSQL>
+    
+</CONFIG>

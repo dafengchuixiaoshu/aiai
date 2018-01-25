@@ -1,0 +1,19 @@
+<CONFIG>
+
+    <IMSERVER>
+        <TYPE>TCP</TYPE>
+        <PROTO>BYTE</PROTO>
+        <LOCALPORT>8030</LOCALPORT>
+        <LOCALIP>10.51.111.49</LOCALIP>
+    </IMSERVER>
+
+    <MYSQL>
+        <DESC>aiai</DESC>
+        <IP>127.0.0.1</IP>
+        <USER>root</USER>
+        <PIN>Zhuanyun1002015</PIN>
+        <DATABASE>miaomiao</DATABASE>
+        <PORT>3306</PORT>
+    </MYSQL>
+    
+</CONFIG>

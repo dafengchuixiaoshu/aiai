@@ -1,0 +1,319 @@
+package im;
+
+message im
+{
+    enum Type
+    {
+        IM_ROOT = 0;
+        IM_ACK = 1;
+        IM_CHAT = 2;
+        IM_CLOSE = 3;
+		IM_LOGIN = 4;
+		IM_LOGOUT = 5;
+		IM_KICKOUT = 6;
+		IM_UPSTREAM = 7;
+		IM_KEEPALIVE = 8;
+	    IM_PGCREATE = 9;
+	    IM_PGINVITE = 10;
+	    IM_PGQUIT = 11;
+	    IM_PGMODIFY = 12;
+	    IM_PGCARD = 13;
+	    IM_SNS = 14;
+	    IM_FANSMODIFY = 15;
+	    IM_FANSAPPEND = 16;
+	    IM_FANSDELETE = 17;
+        IM_MESSAGE = 18;
+        IM_MAPPOINT = 19;
+		IM_DELETE = 20;
+		IM_BLACKLIST = 21;
+	}
+
+	message imack
+	{
+		required string id = 1;
+	
+		optional string addr = 2;
+	
+		optional string time = 3;
+	
+		optional string name = 4;
+	}
+	
+	message imchat
+	{
+		required string id = 1;
+	
+		optional string to = 2;
+	
+		optional string addr = 3;
+	
+		optional string body = 4;
+
+		optional string from = 5;
+	
+		optional string type = 6;
+	
+		optional string category = 7;
+	
+		optional string time = 8;
+	
+		optional int32 issave = 9;
+		
+		optional int32 isshare = 10;
+	}
+	
+	message imclose
+	{
+		required string user = 1;
+	
+		required string addr = 2;
+	}
+
+	message imlogin
+	{
+		optional string from = 1;
+	
+		optional string domain = 2;
+	
+		optional string platform = 3;
+	
+		optional string resource = 4;
+		
+		optional int32 status = 5;
+	}
+	
+	message imlogout
+	{
+		optional int32 status = 1;
+	}
+	
+	message imupstream
+	{
+		required string from = 1;
+	
+		required string domain = 2;
+	
+		required string platform = 3;
+	
+		required string resource = 4;
+	}
+
+	message imkeepalive
+	{
+		required string id = 1;	
+	}
+	
+	message impgcreate
+	{
+		required string id = 1;
+
+		required string gid = 2;
+
+		required string name = 3;
+		
+		required string time = 4;
+		
+		required int32 type = 5;
+	}
+	
+	message impginvite
+	{
+		required string id = 1;
+
+		required string gid = 2;
+
+		required string name = 3;
+		
+		required string time = 4;
+		
+		required string invites = 5;
+		
+		required int32 type = 6;
+	}
+	
+	message impgquit
+	{
+		required string id = 1;
+
+		required string gid = 2;
+
+		required string gkey = 3;
+		
+		required string name = 4;
+		
+		required string time = 5;
+		
+		required int32 type = 6;
+		
+		required string uid = 7;
+	}
+
+	message impgmodify
+	{
+		required string id = 1;
+
+		required string gid = 2;
+
+		required string gname = 3;
+		
+		required string name = 4;
+		
+		required string time = 5;
+		
+		required int32 type = 6;
+	}
+
+	message impgcard
+	{
+		required string id = 1;
+
+		required string gid = 2;
+
+		required string uid = 3;
+		
+		required string cardname = 4;
+		
+		required string time = 5;
+	}
+	
+	message imsns
+	{
+		required string id = 1;
+
+		required string subtype = 2;
+	}
+
+	message imfansmodify
+	{
+		required string id = 1;
+
+		required string uid = 2;
+
+		required string name = 3;
+		
+		required string key = 4;
+		
+		required string info = 5;
+	}
+
+	message imfansappend
+	{
+		required string id = 1;
+
+		required string uid = 2;
+
+		required string key = 3;
+		
+		required string time = 4;
+		
+		required string subtype = 5;
+		
+		required string name = 6;
+		
+		required string info = 7;
+		
+		required string cmsid = 8;
+	}
+	
+	message imfansdelete
+	{
+		required string id = 1;
+
+		required string uid = 2;
+		
+		required string time = 3;
+	}
+    
+    message immessage
+	{
+		required string id = 1;
+		
+		required string touser = 2;
+		
+		required string msgtype = 3;
+	
+		required string fromuser = 4;
+	
+		required string category = 5;
+	
+		required string imagekey = 6;
+	
+		required string txtbuffer = 7;
+		
+		optional string imagewidth = 8;
+		
+		optional string imageheight = 9;
+		
+		optional string videolength = 10;
+		
+		optional string videokey = 11;
+		
+		optional string videotitle = 12;
+	}
+	
+	message immappoint
+	{
+		required string xpoint = 1;
+		
+		required string ypoint = 2;
+	}
+    
+	message imdelete
+	{
+		required string msgid = 1;
+
+		required string imagekey = 2;
+
+		required string videokey = 3;
+	}
+	
+	message imblacklist
+	{
+		required int32 type = 1;
+
+		required string blackid = 2;
+	}
+	
+	required Type msgtype = 1 [default = IM_ROOT];
+	
+	optional imack ack = 2;
+	
+	optional imchat chat = 3;
+
+	optional imclose close = 4;
+
+	optional imlogin login = 5;
+
+	optional imlogout logout = 6;
+
+	optional imupstream upstream = 7;
+
+	optional imkeepalive keepalive = 8;
+
+	optional impgcreate pgcreate = 9;
+	
+	optional impginvite pginvite = 10;
+
+	optional impgquit pgquit = 11;
+
+	optional impgmodify pgmodify = 12;
+	
+	optional impgcard pgcard = 13;
+	
+	optional imsns sns = 14;
+	
+	optional imfansmodify fansmodify = 15;
+	
+	optional imfansappend fansappend = 16;
+
+	optional imfansdelete fansdelete = 17;
+
+	optional immessage message = 18;
+	
+	optional immappoint mappoint = 19;
+	
+	optional imdelete delete_ = 20;
+	
+	optional imblacklist blacklist_ = 21;
+}
+
